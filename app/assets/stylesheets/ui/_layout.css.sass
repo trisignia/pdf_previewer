@@ -1,0 +1,422 @@
+// PRIMARY COLORS AND USAGES VARIABLES
+
+//Main Colors
+$clr-docublue: #2a4c77
+$clr-docured: #ff3333
+$clr-lightblue: #008fd2
+$clr-maingrey: #aaacaf
+$clr-lightgrey: #e5e5e5
+
+//Status Colors
+$clr-active: #8dc63f
+$clr-draft: #aaacaf
+$clr-notice: #b06ee9
+$clr-terminated: #666
+$clr-actionrequired: #f7941d
+
+//Other Colors
+$clr-warning: #f8fbfd
+//#ffe9e9
+$warning_color: #ffe9e9
+$clr-cardbg: #f8fbfd
+
+
+
+
+html
+  //padding: 0% 3%
+  line-height: 1
+.container
+  padding: 0% 3%
+  margin: 0 auto
+
+// LAYOUT HACKS TO ALLOW WHITESPACE BETWEEN GRID ELEMENTS
+.grid
+  letter-spacing: -0.31em
+
+  // Opera hack 
+  .opera:-o-prefocus, .grid 
+    word-spacing: -0.43em
+
+  .grid__item 
+    letter-spacing: normal
+    word-spacing: normal
+
+
+// Overall Styling Elements
+body
+  color: #666666
+
+a
+  color: $clr-docublue
+  text-decoration: none
+a:hover
+  color: $clr-lightblue
+
+
+.grey
+  background-color: #cfd9e6
+  padding-top: 10px
+  padding-bottom: 10px
+
+.section-title
+  border-bottom: 1px solid $clr-lightgrey
+
+.btn 
+  background: $clr-lightblue
+  font-weight: bold
+  border-radius: 10px
+  font-size: 14px
+.btn:hover
+  opacity: 0.8
+  color: #fff
+.btn--grey
+  background: $clr-maingrey
+
+.btn--small
+  font-size: 10px
+  padding: 2px 10px
+
+.pill
+  background: #4E9EFF
+  text-decoration: none
+  a
+    text-decoration: none
+
+span.pill
+  background: $clr-maingrey
+  padding: 4px
+  a
+    color: #fff
+    padding: 4px
+
+
+.pill:hover
+  background: $clr-lightblue
+  a:hover
+
+ul, ol
+  margin-left: 1rem
+
+
+//  ******************** App Header Elements ***********
+.page-head
+  background-color: $clr-docublue
+  color: #fff
+  margin-bottom: 20px
+  padding-top: 30px
+
+  a
+    color: #fff
+
+  .nav--block
+    li
+      a
+        text-decoration: none 
+        font-size: 100%
+        padding-top: 0
+        margin-right: 35px
+        .current
+          font-weight: bold
+
+
+  .search
+    border-radius: 10px
+    padding: 8px
+    border: none
+    color: $clr-maingrey
+    font-size: 14px
+    position: relative
+    top: -5px
+    float: right
+    margin-right: 10px
+
+  .search:focus
+    color: #333
+    border: none
+
+  #tag_drawer
+    display: none
+
+
+  .nav--utility
+    font-size: 12px
+    float: right
+    position: relative
+    top: -5px
+    li
+      margin: 0 2px
+  .nav--utility li:before
+    content: "  |    "
+    margin-right: 5px
+  .nav--utility li:first-child:before
+    content: ""  
+  
+
+  #tag_drawer
+    background: #dbe4ef
+    border-bottom: 1px solid $clr-docublue
+    .tag-list
+      font-size: 12px
+      padding: 20px
+      ul
+        list-style: none
+        margin-bottom: 0px
+        li
+          margin-bottom: 5px
+
+
+//  ******************** Home STYLING ***********
+
+.homewrap
+  margin: 0 auto
+  max-width: 1000px
+
+.heroarea
+  margin-top: 20px
+
+.plan
+  padding: 20px
+  border-radius: 20px
+
+
+//  ******************** Contract Column View ***********
+
+.warnings
+  border: 1px solid #cfd9e6
+  padding: 10px
+  margin-bottom: 20px
+  //background-color: $clr-warning
+  h4
+    margin-bottom: 5px
+  ul
+    margin-bottom: 5px
+    list-style: none
+    li
+      background: url(image_path("icon-warning.png")) no-repeat left 2px
+      margin-left: 0
+      padding-left: 24px
+  .close
+    font-size: 12px
+
+
+.contract_subnav
+  margin-bottom: 10px
+  .nav.options 
+    a
+      color: #d7d7d7
+      font-size: 12px
+      font-weight: bold
+    li:first-child
+      a
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+    li:last-child
+      a
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
+    a.current
+      color: #fff
+    .columnview
+      background: url(image_path("icon-column-off.png")) 12px center no-repeat
+      padding-left: 30px
+    .columnview.current
+      background: $clr-lightblue url(image_path("icon-column-on.png")) 12px center no-repeat
+    .listview
+      background: url(image_path("icon-list-off.png")) 20px center no-repeat
+      padding-left: 40px
+    .listview.current
+      background: $clr-lightblue url(image_path("icon-list-on.png")) 10px center no-repeat
+
+
+.stage-list
+  min-height: 200px
+
+.stage .viewall
+  font-size: 14px
+
+.fileinput-button
+  margin-bottom: 8px
+
+
+.columns 
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+  h4
+    margin-bottom: 6px
+    padding-bottom: 6px
+    font-size: 100%
+  p.milli
+    line-height: 1.2
+    margin-bottom: 10px
+
+//  ******************** Contract List View ***********
+
+tbody.contract_list 
+  tr
+    border-top: 1px solid #ccc
+
+
+//  ******************** CARD STYLING ***********
+
+.card
+  margin: 0px 0px 3px 0
+  background: $clr-cardbg
+  clear: both
+  font-size: 80%
+  -webkit-box-shadow: inset 0px 0px 0px 1px #cccccc, 1px 1px 1px 2px rgba(204, 204, 204, .3)
+  box-shadow: inset 0px 0px 0px 1px #cccccc, 1px 1px 1px 2px rgba(204, 204, 204, .3)
+  min-height: 60px
+
+  &.card--warning, .warnings
+    background: $clr-warning url(image_path("icon-warning.png")) 98% 2% no-repeat
+
+
+tr.warning td
+  background-color: $clr-warning
+
+li.card
+  list-style: none
+  margin-left: 0
+
+.card__header
+  padding: 8px 8px 0 8px
+  h1, h2, h3, h4, h5
+    font-weight: normal
+  h1
+    font-size: 100%
+    margin: 0
+    padding: 0
+    a
+      text-decoration: none
+  h2
+    font-size: 100%
+    opacity: 0.8
+    margin: 0
+    padding: 0
+.card__body
+  display: none
+  font-size: 12px
+
+  .inner
+    padding: 8px
+  ul
+    margin: 5px 0 0 0
+    padding-left: 0
+    list-style: none
+  li
+    margin-bottom: 5px
+
+  h3
+    font-size: 80%
+  .tags
+    
+  .dates
+    
+    margin-top: 10px
+    .stat
+      margin: 0 20px 10px 0
+  .more
+    clear: both
+    margin-bottom: 0
+    font-size: 80%
+
+
+//  ******************** Card Contract Styling  ***********
+
+.text-danger
+  color: $clr-docured
+  font-size: 12px
+  margin-top: 8px
+
+.card--contract
+  border-top: 8px solid $clr-maingrey
+
+  .go
+    background: $clr-lightgrey
+    color: #fff
+    width: 100%
+    display: block
+    text-align: center
+    padding: 2px
+    font-weight: bold
+
+
+.contract--draft
+  border-color: $clr-draft
+
+.contract--active
+  border-color: $clr-active
+
+.contract--action_required
+  border-color: $clr-actionrequired
+
+.contract--notice_given
+  border-color: $clr-notice
+
+.contract--terminated
+  border-color: $clr-terminated
+
+//  ******************** Card File Styling  ***********
+
+.card--file
+  img
+    margin: 8px
+  .media
+    margin-bottom: 0
+      
+  .btn
+  .card__header
+    padding-bottom: 8px
+
+
+//  ******************** Edit Contract Page  ***********
+
+.tab
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  font-size: 80%
+  background: #f3f3f3
+
+.tab__active
+  background: #ccc
+
+.file_tabs
+  margin: 10px 0 0 0
+  border: 0
+
+.preview_pane
+  height: 1000px
+  overflow: scroll
+  border: 8px solid #ccc
+
+
+input.calendar
+  width: 100%
+
+  //  ******************** Contract Detail  ***********
+
+.full--contract
+  border-top-width: 20px
+  border-top-style: solid
+  margin-top: 30px
+  padding-top: 20px
+  h2.section-title
+    margin-top: 40px
+  h3.section-title
+    margin-top: 30px
+
+  //  ******************** Application Footer  ***********
+
+footer
+  clear: both
+  background: $clr-lightgrey
+  padding: 20px 0 40px
+  font-size: 12px
+  margin-top: 20px
+  p
+    margin: 4px 0
+  p:first-child
+    margin-top: 10px
